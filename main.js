@@ -6,6 +6,7 @@ function startC2CMonitor(j) {
   setInterval(async () => {
     try {
       const a = await getTotalEntries(eventUrl);
+      console.log("c2c participiants" , a);
       if (typeof a === 'number') {
         const entries = totalSeats - a;
         if (entries === 1000 && !notified) {

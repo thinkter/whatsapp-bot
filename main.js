@@ -1,8 +1,15 @@
 const { Client } = require('whatsapp-web.js');
 const qrcode = require('qrcode-terminal');
 // Create a new client instance
-const client = new Client();
+//const client = new Client();
 
+const client = new Client({
+  puppeteer: {
+    executablePath: '/usr/bin/chromium-browser',
+    headless: true, // optional
+    args: ['--no-sandbox', '--disable-setuid-sandbox'] // recommended for Linux servers
+  }
+});
 
 async function getTotalEntries(url) {
 

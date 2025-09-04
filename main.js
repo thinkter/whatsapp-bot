@@ -124,16 +124,24 @@ client.on('message_create', async message => {
       }
     } else if (message.body.startsWith("!search")) {
       let query = message.body.replace("!search", "").trim();
-      const [e,f] = await getID(`https://gravitas.vit.ac.in/api/events?name=${query}`);
+      const [e, f] = await getID(`https://gravitas.vit.ac.in/api/events?name=${query}`);
       const c = await getTotalEntries(`https://gravitas.vit.ac.in/api/events/${e}`);
       let b = `${f}: Total number of seats left are ${c}`;
       await client.sendMessage(message.from, b);
     } else if (message.body === '!help') {
-      await client.sendMessage(message.from, "cmds are: !c2c, !ch, !dj, !search <query>");
+      await client.sendMessage(message.from, "cmds are: !c2c, !ch, !dj, !git, !ashman, !search <query>");
+    } else if (message.body === '!git') {
+      await client.sendMessage(message.from, "https://github.com/thinkter if ur a senior pls get me an internship gang 🙏");
     } else if (message.body === '!ashman') {
       let contact = await message.getContact();
       let name = contact.name;
-      await client.sendMessage(message.from, `sybau ${name}`);
+      if (name == "Mahendra Choudhary") {
+        await client.sendMessage(message.form, "womp womp hyprland user");
+      } if(name == "Ishaan acm"){
+        await client.sendMessage(message.form,"wassup machha" );
+      }else {
+        await client.sendMessage(message.from, `https://www.instagram.com/reel/DKi0uydOunN/?igsh=amszZHhrcmZsaGEz`);
+      }
     }
   } catch (err) {
     console.error('Error in command handler:', err);

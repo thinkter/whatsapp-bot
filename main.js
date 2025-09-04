@@ -129,7 +129,15 @@ client.on('message_create', async message => {
       let b = `${f}: Total number of seats left are ${c}`;
       await client.sendMessage(message.from, b);
     } else if (message.body === '!help') {
-      await client.sendMessage(message.from, "cmds are: !c2c, !ch, !dj, !git, !ashman, !search <query>");
+      await client.sendMessage(message.from, "cmds are: !c2c, !ch, !acm, !dj, !git, !ashman, !boobass, !search <query>");
+    } else if (message.body === '!boobass') {
+      // await client.sendMessage(message.from, "cmds are: !c2c, !ch, !dj, !git, !ashman, !search <query>");
+      const media = MessageMedia.fromFilePath('haha.png');
+      await client.sendMessage(msg.from, media);
+    } else if (message.body === '!acm') {
+      // await client.sendMessage(message.from, "cmds are: !c2c, !ch, !dj, !git, !ashman, !search <query>");
+      const media = MessageMedia.fromFilePath('acm.jpeg');
+      await client.sendMessage(msg.from, media);
     } else if (message.body === '!git') {
       await client.sendMessage(message.from, "https://github.com/thinkter if ur a senior pls get me an internship gang 🙏");
     } else if (message.body === '!ashman') {
@@ -137,9 +145,9 @@ client.on('message_create', async message => {
       let name = contact.name;
       if (name == "Mahendra Choudhary") {
         await client.sendMessage(message.form, "womp womp hyprland user");
-      } if(name == "Ishaan acm"){
-        await client.sendMessage(message.form,"wassup machha" );
-      }else {
+      } if (name == "Ishaan acm") {
+        await client.sendMessage(message.form, "wassup machha");
+      } else {
         await client.sendMessage(message.from, `https://www.instagram.com/reel/DKi0uydOunN/?igsh=amszZHhrcmZsaGEz`);
       }
     }

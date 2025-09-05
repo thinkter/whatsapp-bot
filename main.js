@@ -178,7 +178,8 @@ client.on('message_create', async message => {
         await client.sendMessage(message.form, "wassup machha");                                                                                                   
       } else {                                                                                                                                                     
         //await client.sendMessage(message.from, `https://www.instagram.com/reel/DKi0uydOunN/?igsh=amszZHhrcmZsaGEz`);                                             
-        await client.sendMessage(message.from, `https://www.instagram.com/reel/DNJE2x5tNuJ/`);                                                                     
+        //await client.sendMessage(message.from, `https://www.instagram.com/reel/DNJE2x5tNuJ/`);                                                                     
+        await client.sendMessage(message.from, `https://www.youtube.com/watch?v=WpWG_YYQQVo`);                                                                     
       }                                                                                                                                                            
     }                                                                                                                                                              
   } catch (err) {                                                                                                                                                  

@@ -114,8 +114,8 @@ client.on('message_create', async message => {
       if (a == null) {                                                                                                                                             
         await client.sendMessage(message.from, 'C2C: Unable to fetch or fallback to last known value.');                                                           
       } else {                                                                                                                                                     
-        let b = `C2C: Total number of seats left are ${a}/1500`;                                                                                                   
-        let b2 = `C2C: Total number of entries are ${1500 - a}`;       
+        let b = `C2C: Total number of seats left are ${a}/2500`;                                                                                                   
+        let b2 = `C2C: Total number of entries are ${2500 - a}`;       
                await client.sendMessage(message.from, b2);
         await client.sendMessage(message.from, b);
       }                                                                                                                                                            
